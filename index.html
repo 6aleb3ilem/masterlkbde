@@ -3,506 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ماستر الكبدة | مذاق الكبدة الموريتانية المشوية التقليدية</title>
-  <meta name="description" content="يقدم ماستر الكبدة الكبدة الموريتانية الأصيلة المشوية على الفحم مع البصل الطازج والخبز التقليدي والشاي الموريتاني في أجواء محلية دافئة بنواكشوط.">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo.png">
-  
-  <!-- Google Fonts: Cairo (Arabic) & Montserrat (Latin) & Great Vibes (for cursive handwriting) -->
+  <title>Master Lkbde | Traditional Mauritanian Grilled Liver</title>
+  <meta name="description" content="Master Lkbde serves authentic Mauritanian grilled liver with charcoal flavor, fresh onions, traditional bread, tea, and a warm local atmosphere in Nouakchott.">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://masterlkbde.com/">
+  <link rel="icon" type="image/png" href="assets/logo-cropped.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons for UI -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Custom CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Marhey:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Sticky Header -->
-  <header class="main-header" id="main-header">
-    <div class="header-container">
-      <!-- Left: Logo -->
-      <a href="#" class="logo-link" id="header-logo-link" aria-label="Master Lkbde Logo">
-        <img src="logo.png" alt="ماستر الكبدة Logo" class="logo-img">
-      </a>
-      
-      <!-- Center: Language Switcher -->
-      <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ar">العربية</button>
-        <span class="divider">|</span>
-        <button class="lang-btn" data-lang="fr">Français</button>
-        <span class="divider">|</span>
-        <button class="lang-btn" data-lang="en">English</button>
-      </div>
-      
-      <!-- Right: Stacked CTA Buttons -->
-      <div class="header-ctas">
-        <a href="https://wa.me/22237490606?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D9%8C%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%83%D8%A8%D8%AF%D8%A9%20%D9%85%D9%86%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D8%AF%D8%A9" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="cta-btn cta-whatsapp" 
-           id="header-cta-wa">
-          <i class="fab fa-whatsapp"></i>
-          <span data-key="nav-order">اطلب عبر واتساب</span>
-        </a>
-        <a href="#location-section" class="cta-btn cta-location" id="header-cta-loc">
-          <i class="fas fa-map-marker-alt"></i>
-          <span data-key="nav-find">اعثر علينا</span>
-        </a>
-      </div>
-    </div>
+  <header class="site-header" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Master Lkbde home">
+      <img src="assets/logo-cropped.png" alt="ماستر الكبدة" width="150" height="90">
+    </a>
+    <nav class="language-switcher" aria-label="Language switcher">
+      <button class="lang-btn is-active" type="button" data-lang="ar">العربية</button>
+      <span aria-hidden="true">|</span>
+      <button class="lang-btn" type="button" data-lang="fr">Français</button>
+      <span aria-hidden="true">|</span>
+      <button class="lang-btn" type="button" data-lang="en">English</button>
+    </nav>
+    <a class="header-whatsapp" data-whatsapp href="https://wa.me/22237490606?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%83%D8%A8%D8%AF%D8%A9%20%D9%85%D9%86%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D8%AF%D8%A9" target="_blank" rel="noopener"><span>☘</span><span data-i18n="navOrder">اطلب عبر واتساب</span></a>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero-section">
-    <div class="hero-grid-container">
-      
-      <!-- Left Column: Round Image + Circular Overlay Badge -->
-      <div class="hero-left-col">
-        <div class="hero-image-card">
-          <img src="liver1.webp" alt="الكبدة الموريتانية المشوية مع البصل" class="hero-card-img">
-          <div class="hero-badge-overlay">
-            <div class="badge-content">
-              <span class="badge-ar" data-key="hero-badge-ar">طبق واحد...<br>لكن بطعم لا يُنسى</span>
-              <span class="badge-en" data-key="hero-badge-en">One specialty.<br>Perfected every day.</span>
-              <span class="badge-fr" data-key="hero-badge-fr">Un seul plat.<br>Préparé à la perfection.</span>
-              <div class="badge-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
+  <main id="home">
+    <section class="hero section-full">
+      <picture>
+        <source media="(max-width: 700px)" srcset="assets/plate-smoke.webp">
+        <img class="hero-bg" src="assets/hero-food.webp" alt="كبدة مشوية على الفحم مع البصل" fetchpriority="high">
+      </picture>
+      <div class="smoke-layer" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Foie &amp; Gras au Grill</p>
+        <div class="fire-divider" aria-hidden="true"><span></span>🔥<span></span></div>
+        <h1 data-i18n="heroTitle">ماستر الكبدة</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">أصالة المذاق الموريتاني</p>
+        <p class="hero-note" data-i18n="heroNote">كبدة موريتانية مشوية على الفحم، بصل طازج، خبز تقليدي، وأتاي يكمّل الجلسة.</p>
+        <div class="hero-actions">
+          <a class="btn btn-whatsapp" data-whatsapp href="https://wa.me/22237490606?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%83%D8%A8%D8%AF%D8%A9%20%D9%85%D9%86%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D8%AF%D8%A9" target="_blank" rel="noopener">☘ <span data-i18n="orderWhatsapp">اطلب عبر واتساب</span></a>
+          <a class="btn btn-outline" href="#location">📍 <span data-i18n="findUs">اعثر علينا</span></a>
         </div>
       </div>
-      
-      <!-- Right Column: Hero Content & Titles -->
-      <div class="hero-right-col">
-        <div class="hero-content">
-          <!-- Cursive Welcome Text -->
-          <div class="cursive-welcome">Bienvenue</div>
-          
-          <!-- Brand Title -->
-          <h1 class="hero-title" data-key="hero-title">
-            ماستر <span class="title-highlight">الـ</span>كبدة
-          </h1>
-          
-          <!-- Diamond Divider -->
-          <div class="hero-divider">
-            <span class="divider-line"></span>
-            <span class="divider-diamond">◆</span>
-            <span class="divider-line"></span>
-          </div>
-          
-          <!-- Subtitle Arabic -->
-          <p class="hero-subtitle-ar" data-key="hero-subtitle">
-            ◆ أصالة المذاق الموريتاني ◆
-          </p>
-          
-          <!-- Subtitles other languages -->
-          <div class="hero-translations">
-            <p class="sub-trans" data-key="hero-sub-en">Master Lkbde — Traditional Mauritanian Grilled Liver</p>
-            <p class="sub-trans" data-key="hero-sub-fr">Maître Lkbde — Foie grillé à la Mauritanienne</p>
-          </div>
-          
-          <!-- Features Bar -->
-          <div class="hero-features-bar">
-            <!-- Feature 1 -->
-            <div class="hero-feature-item">
-              <div class="feat-icon"><i class="fas fa-fire-alt"></i></div>
-              <h3 data-key="feat-charcoal">مشوي على الفحم</h3>
-              <p class="feat-sub" data-key="feat-charcoal-sub">Grilled on charcoal / Grillé au charbon</p>
-            </div>
-            
-            <!-- Feature 2 -->
-            <div class="hero-feature-item">
-              <div class="feat-icon"><i class="fas fa-circle-nodes"></i></div>
-              <h3 data-key="feat-onion">بصل طازج</h3>
-              <p class="feat-sub" data-key="feat-onion-sub">Fresh onions / Oignons frais</p>
-            </div>
-            
-            <!-- Feature 3 -->
-            <div class="hero-feature-item">
-              <div class="feat-icon"><i class="fas fa-bread-slice"></i></div>
-              <h3 data-key="feat-bread">خبز تقليدي</h3>
-              <p class="feat-sub" data-key="feat-bread-sub">Traditional bread / Pain traditionnel</p>
-            </div>
-          </div>
-          
+    </section>
+
+    <section class="signature section-pad" aria-labelledby="signature-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="signatureKicker">تخصصنا الوحيد</p>
+        <h2 id="signature-title" data-i18n="signatureTitle">لكبدة كما يجب أن تكون</h2>
+      </div>
+      <div class="signature-grid">
+        <article class="dish-photo reveal"><img src="assets/foil-trays.webp" alt="طبق كبدة مع البصل" loading="lazy"></article>
+        <div class="feature-cards">
+          <article class="feature-card reveal"><span>🔥</span><h3 data-i18n="charcoal">مشوي على الفحم</h3><p data-i18n="charcoalText">نكهة دخان حقيقية وطهي مباشر أمامك.</p></article>
+          <article class="feature-card reveal"><span>🧅</span><h3 data-i18n="onions">بصل طازج</h3><p data-i18n="onionsText">بصل يوازن حرارة الفحم وغنى الكبدة.</p></article>
+          <article class="feature-card reveal"><span>🥖</span><h3 data-i18n="bread">خبز تقليدي</h3><p data-i18n="breadText">خبز دافئ يرافق كل لقمة.</p></article>
         </div>
       </div>
-      
-    </div>
-  </section>
+    </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery-section" id="gallery-section">
-    <div class="section-container">
-      <div class="gallery-header">
-        <div class="fancy-title-wrapper">
-          <span class="title-line"></span>
-          <span class="title-diamond">◆</span>
-          <h2 class="section-title text-center" data-key="gallery-title">من أجوائنا</h2>
-          <span class="title-diamond">◆</span>
-          <span class="title-line"></span>
+    <section class="gallery section-pad" aria-labelledby="gallery-title">
+      <div class="section-heading reveal"><h2 id="gallery-title" data-i18n="galleryTitle">من أجوائنا</h2></div>
+      <div class="carousel reveal" aria-roledescription="carousel">
+        <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+        <div class="carousel-track" tabindex="0">
+          <figure><img src="assets/hero-food.webp" alt="كبدة على الشواية مع الدخان" loading="lazy"><figcaption data-i18n="gal1">الكبدة على الفحم</figcaption></figure>
+          <figure><img src="assets/bread-grill.webp" alt="خبز تقليدي على الشواية" loading="lazy"><figcaption data-i18n="gal2">خبز على الجمر</figcaption></figure>
+          <figure><img src="assets/foil-trays.webp" alt="كبدة بالبصل في صينية تقديم" loading="lazy"><figcaption data-i18n="gal3">كبدة بالبصل</figcaption></figure>
+          <figure><img src="assets/plate-smoke.webp" alt="طبق كبدة مع دخان خفيف" loading="lazy"><figcaption data-i18n="gal4">تقديم ساخن</figcaption></figure>
+          <figure><img src="assets/traditional-room.webp" alt="جلسة موريتانية تقليدية" loading="lazy"><figcaption data-i18n="gal5">جلسة تقليدية</figcaption></figure>
+          <figure><img src="assets/loyalty.webp" alt="بطاقة وفاء ماستر الكبدة" loading="lazy"><figcaption data-i18n="gal6">بطاقة الوفاء</figcaption></figure>
+          <figure><img src="assets/bread-bowl.webp" alt="خبز تقليدي في سلة" loading="lazy"><figcaption data-i18n="gal7">خبز تقليدي</figcaption></figure>
         </div>
+        <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+        <div class="dots" aria-label="Gallery dots"></div>
       </div>
-      
-      <!-- Carousel Slider Container -->
-      <div class="carousel-container" id="gallery-carousel-container">
-        <button class="carousel-nav prev" id="prev-slide-btn" aria-label="المشهد السابق">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        
-        <div class="carousel-track-container">
-          <div class="carousel-track" id="carousel-track">
-            <!-- Slide 1: Grilled Liver -->
-            <div class="carousel-slide">
-              <div class="gallery-card">
-                <img src="liver7.webp" alt="كبدة مشوية طازجة" class="gallery-img" loading="lazy">
-                <div class="gallery-info">
-                  <h4 data-key="gal-item-1">كبدة مشوية على الفحم</h4>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Slide 2: Bread on grill -->
-            <div class="carousel-slide">
-              <div class="gallery-card">
-                <img src="liver4.webp" alt="الخبز الموريتاني التقليدي على الشواية" class="gallery-img" loading="lazy">
-                <div class="gallery-info">
-                  <h4 data-key="gal-item-4">خبز دافئ على الشواية</h4>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Slide 3: Liver with Onions -->
-            <div class="carousel-slide">
-              <div class="gallery-card">
-                <img src="liver3.webp" alt="طبق الكبدة مع البصل والتوابل" class="gallery-img" loading="lazy">
-                <div class="gallery-info">
-                  <h4 data-key="gal-item-3">كبدة مع البصل الذهبي</h4>
-                </div>
-              </div>
-            </div>
+    </section>
 
-            <!-- Slide 4: Tea Setup -->
-            <div class="carousel-slide">
-              <div class="gallery-card">
-                <img src="liver9.webp" alt="شاي موريتاني أتاي أصيل" class="gallery-img" loading="lazy">
-                <div class="gallery-info">
-                  <h4 data-key="gal-item-5">كؤوس الأتاي الموريتاني</h4>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 5: Traditional Seating -->
-            <div class="carousel-slide">
-              <div class="gallery-card">
-                <img src="liver10.webp" alt="جلسة موريتانية تقليدية هادئة" class="gallery-img" loading="lazy">
-                <div class="gallery-info">
-                  <h4 data-key="gal-item-6">جلسة تقليدية مريحة</h4>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 6: Serving plates -->
-            <div class="carousel-slide">
-              <div class="gallery-card">
-                <img src="liver17.webp" alt="أطباق التقديم ماستر الكبدة" class="gallery-img" loading="lazy">
-                <div class="gallery-info">
-                  <h4 data-key="gal-item-8">جاهز للتقديم الفوري</h4>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Slide 7: Loyalty Card -->
-            <div class="carousel-slide">
-              <div class="gallery-card">
-                <img src="liver15.webp" alt="بطاقة الوفاء وعلامة ماستر الكبدة" class="gallery-img" loading="lazy">
-                <div class="gallery-info">
-                  <h4 data-key="gal-item-9">بطاقة الوفاء الخاصة بالعملاء</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <button class="carousel-nav next" id="next-slide-btn" aria-label="المشهد التالي">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-      
-      <!-- Carousel Indicators/Dots -->
-      <div class="carousel-indicators" id="carousel-indicators">
-        <!-- Generated dynamically in JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section class="experience-section" id="experience-section">
-    <div class="section-container">
-      
-      <div class="experience-header text-center">
-        <div class="fancy-title-wrapper">
-          <span class="title-line"></span>
-          <span class="title-diamond">◆</span>
-          <h2 class="section-title" data-key="exp-title">تجربة ماستر الكبدة</h2>
-          <span class="title-diamond">◆</span>
-          <span class="title-line"></span>
-        </div>
-      </div>
-      
+    <section class="experience section-pad" aria-labelledby="experience-title">
+      <div class="section-heading reveal"><h2 id="experience-title" data-i18n="experienceTitle">تجربة ماستر الكبدة</h2></div>
       <div class="experience-grid">
-        <!-- Left: 3 Experience Cards -->
-        <div class="experience-cards-col">
-          <!-- Card 1: النار -->
-          <div class="exp-card">
-            <div class="exp-icon">
-              <i class="fas fa-fire-alt animate-fire"></i>
-            </div>
-            <div class="exp-info">
-              <h3 data-key="exp-c1-title">النار</h3>
-              <p class="exp-desc" data-key="exp-c1-desc">تُطهى مباشرة على الفحم أمامك كل يوم</p>
-              <p class="exp-sub" data-key="exp-c1-sub">Cooked live on the grill / Cuit en direct sur le grill</p>
-            </div>
-          </div>
-          
-          <!-- Card 2: أتاي -->
-          <div class="exp-card">
-            <div class="exp-icon">
-              <i class="fas fa-mug-hot"></i>
-            </div>
-            <div class="exp-info">
-              <h3 data-key="exp-c2-title">أتاي</h3>
-              <p class="exp-desc" data-key="exp-c2-desc">شاي موريتاني أصيل يكمل تجربتك</p>
-              <p class="exp-sub" data-key="exp-c2-sub">Traditional Mauritanian tea / Thé mauritanien authentique</p>
-            </div>
-          </div>
-          
-          <!-- Card 3: الجلسة -->
-          <div class="exp-card">
-            <div class="exp-icon">
-              <i class="fas fa-couch"></i>
-            </div>
-            <div class="exp-info">
-              <h3 data-key="exp-c3-title">الجلسة</h3>
-              <p class="exp-desc" data-key="exp-c3-desc">جلسة تقليدية مريحة وأجواء لا تُنسى</p>
-              <p class="exp-sub" data-key="exp-c3-sub">Comfortable traditional seating / Une ambiance inoubliable</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Right: Teapot Tray Image -->
-        <div class="experience-image-col">
-          <div class="exp-img-wrapper">
-            <img src="liver9.webp" alt="أتاي شاي موريتاني تقليدي" class="exp-showcase-img">
-            <div class="exp-img-glow"></div>
-          </div>
-        </div>
+        <article class="experience-card reveal"><span>🔥</span><h3 data-i18n="fireTitle">النار</h3><p data-i18n="fireText">تُطهى مباشرة على الفحم أمامك كل يوم</p><small>Cooked live on the grill · Cuit en direct sur le grill</small></article>
+        <article class="experience-card reveal"><span>🫖</span><h3 data-i18n="teaTitle">أتاي</h3><p data-i18n="teaText">شاي موريتاني أصيل يكمل تجربتك</p><small>Traditional Mauritanian tea · Thé mauritanien authentique</small></article>
+        <article class="experience-card reveal"><span>🪑</span><h3 data-i18n="seatTitle">الجلسة</h3><p data-i18n="seatText">جلسة تقليدية مريحة وأجواء لا تُنسى</p><small>Comfortable traditional seating · Une ambiance inoubliable</small></article>
       </div>
-      
-    </div>
-  </section>
+    </section>
 
-  <!-- Location and Hours and CTA Section (3-Column Layout) -->
-  <section class="location-section" id="location-section">
-    <div class="section-container">
-      <div class="bottom-conversion-grid">
-        
-        <!-- Column 1: Map / Location -->
-        <div class="bottom-col-card location-card">
-          <div class="card-header-with-icon">
-            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="card-header-titles">
-              <h2 data-key="loc-title">موقعنا</h2>
-              <span class="card-subtitle" data-key="loc-subtitle">Our Location / Notre emplacement</span>
-            </div>
-          </div>
-          
-          <!-- Interactive Map Box -->
-          <a href="https://maps.app.goo.gl/fDS3npaww55TQ2QE7" target="_blank" rel="noopener noreferrer" class="map-preview-wrapper" aria-label="Open location in Google Maps">
-            <div class="map-glow">
-              <i class="fas fa-map-pin"></i>
-            </div>
-            <div class="map-instructions">
-              <i class="fas fa-directions"></i> <span data-key="map-preview-click">اضغط لعرض الاتجاهات</span>
-            </div>
-            <img src="liver16.webp" alt="موقع ماستر الكبدة بنواكشوط" class="map-bg-img" loading="lazy">
-          </a>
-          
-          <div class="map-links-buttons">
-            <a href="https://maps.app.goo.gl/fDS3npaww55TQ2QE7" target="_blank" rel="noopener noreferrer" class="btn btn-google-map" id="google-maps-btn">
-              <i class="fab fa-google"></i>
-              <span data-key="map-google">افتح في خرائط جوجل</span>
-            </a>
-            <a href="https://maps.apple.com/?q=Master+Lkbde+Nouakchott" target="_blank" rel="noopener noreferrer" class="btn btn-apple-map" id="apple-maps-btn">
-              <i class="fab fa-apple"></i>
-              <span data-key="map-apple">افتح في خرائط أبل</span>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Column 2: Hours -->
-        <div class="bottom-col-card hours-card">
-          <div class="card-header-with-icon">
-            <div class="card-icon"><i class="fas fa-clock"></i></div>
-            <div class="card-header-titles">
-              <h2 data-key="hours-title">ساعات العمل</h2>
-              <span class="card-subtitle" data-key="hours-subtitle">Working Hours / Heures d'ouverture</span>
-            </div>
-          </div>
-          
-          <div class="hours-time-box">
-            <span class="time-range">08:00 - 14:00</span>
-          </div>
-          
-          <div class="hours-details-list">
-            <!-- Arabic details in red/orange -->
-            <p class="hours-ar" data-key="hours-days">كل يوم ما عدا السبت والثلاثاء</p>
-            
-            <!-- English details -->
-            <div class="hours-translation-row">
-              <p class="hours-en" data-key="hours-days-en">Every day except Saturday & Tuesday</p>
-            </div>
-            
-            <!-- French details -->
-            <div class="hours-translation-row">
-              <i class="fas fa-calendar-alt calendar-icon-fade"></i>
-              <p class="hours-fr" data-key="hours-days-fr">Tous les jours sauf samedi et mardi</p>
-            </div>
-          </div>
-          
-          <div class="hours-decor-icons">
-            <i class="fas fa-utensils"></i>
-            <span class="decor-dot"></span>
-            <i class="fas fa-fire animate-glow-orange"></i>
-            <span class="decor-dot"></span>
-            <i class="fas fa-glass-water"></i>
-          </div>
-        </div>
-        
-        <!-- Column 3: WhatsApp CTA Box -->
-        <div class="bottom-col-card wa-cta-card">
-          <div class="wa-cta-card-content">
-            <h2 class="wa-box-title" data-key="wa-sec-title">جاهز للطلب؟</h2>
-            <p class="wa-box-subtitle" data-key="wa-sec-subtitle">Ready to order? | Prêt à commander ?</p>
-            
-            <!-- Large Clickable Phone Display -->
-            <div class="phone-number-display-wrapper">
-              <a href="https://wa.me/22237490606" class="phone-number-link">
-                <span class="phone-number">37 49 06 06</span>
-                <i class="fab fa-whatsapp wa-icon-green"></i>
-              </a>
-            </div>
-            
-            <!-- Big WhatsApp CTA Button -->
-            <a href="https://wa.me/22237490606?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D9%8C%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%83%D8%A8%D8%AF%D8%A9%20%D9%85%D9%86%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D8%AF%D8%A9" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="btn btn-whatsapp-main glow-button" 
-               id="cta-box-wa-btn">
-              <i class="fab fa-whatsapp"></i>
-              <span data-key="wa-sec-btn">اطلب الآن عبر واتساب</span>
-            </a>
-            <div class="btn-subtext" data-key="wa-btn-subtext">Order on WhatsApp | Commander via WhatsApp</div>
-            
-            <!-- Handwritten Orange Signature -->
-            <div class="cursive-signature" data-key="wa-signature">ننتظركم / See you soon! / À bientôt !</div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
+    <section class="emotional" aria-label="Mauritanian experience">
+      <img src="assets/traditional-room.webp" alt="جلسة تقليدية وشاي موريتاني" loading="lazy">
+      <div class="emotional-card reveal"><p data-i18n="emotional">ليست مجرد وجبة...<br>إنها جلسة موريتانية كاملة</p></div>
+    </section>
 
-  <!-- Sticky WhatsApp/Order Bar for Mobile -->
-  <div class="mobile-sticky-bar" id="mobile-sticky-bar">
-    <div class="sticky-bar-container">
-      <div class="sticky-info">
-        <span class="sticky-brand" data-key="sticky-brand">ماستر الكبدة</span>
-        <span class="sticky-phone">37 49 06 06</span>
-      </div>
-      <a href="https://wa.me/22237490606?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D9%8C%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%83%D8%A8%D8%AF%D8%A9%20%D9%85%D9%86%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D8%AF%D8%A9" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="btn btn-sticky-order" 
-         id="mobile-sticky-wa-btn">
-        <i class="fab fa-whatsapp"></i>
-        <span data-key="mobile-sticky-btn">اطلب الآن</span>
-      </a>
-    </div>
-  </div>
+    <section class="practical section-pad" id="location">
+      <article class="info-card map-card reveal">
+        <h2>📍 <span data-i18n="visitTitle">زورونا</span></h2>
+        <p>Nouakchott, Mauritania</p>
+        <a class="map-preview" href="https://maps.app.goo.gl/fDS3npaww55TQ2QE7" target="_blank" rel="noopener" aria-label="Open location in map">
+          <span>Master Lkbde</span><b>📍</b>
+        </a>
+        <a class="btn btn-orange" href="https://maps.app.goo.gl/fDS3npaww55TQ2QE7" target="_blank" rel="noopener" data-i18n="googleMaps">افتح في خرائط جوجل</a>
+        <a class="btn btn-outline" href="https://maps.apple.com/?q=Master%20Lkbde%20Nouakchott%20Mauritania" target="_blank" rel="noopener" data-i18n="appleMaps">افتح في خرائط أبل</a>
+      </article>
+      <article class="info-card hours-card reveal">
+        <h2>🕒 <span data-i18n="hoursTitle">ساعات العمل</span></h2>
+        <strong>08:00 - 14:00</strong>
+        <p data-i18n="hoursDays">كل يوم ما عدا السبت والثلاثاء</p>
+      </article>
+      <article class="info-card cta-card reveal">
+        <h2 data-i18n="readyTitle">جاهز للطلب؟</h2>
+        <a class="phone" href="tel:+22237490606">37 49 06 06</a>
+        <a class="btn btn-whatsapp" data-whatsapp href="https://wa.me/22237490606?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%83%D8%A8%D8%AF%D8%A9%20%D9%85%D9%86%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D8%AF%D8%A9" target="_blank" rel="noopener">☘ <span data-i18n="orderNow">اطلب الآن عبر واتساب</span></a>
+      </article>
+    </section>
+  </main>
 
-  <!-- Social Footer -->
-  <footer class="main-footer" id="main-footer">
-    <!-- Traditional red carpet details on border edges are styled in CSS -->
-    <div class="footer-container">
-      <div class="footer-split-layout">
-        
-        <!-- Right Column: Slogan -->
-        <div class="footer-slogan-col">
-          <div class="slogan-content">
-            <h3 class="slogan-title" data-key="emo-title">
-              ليست مجرد وجبة...<br>إنها جلسة موريتانية كاملة
-            </h3>
-            <div class="slogan-sub-wrapper">
-              <p class="slogan-sub" data-key="footer-slogan-en">More than a meal... A Mauritanian experience.</p>
-              <p class="slogan-sub" data-key="footer-slogan-fr">Plus qu'un repas... Une expérience mauritanienne.</p>
-            </div>
-          </div>
-          <!-- Hand-drawn heart icon -->
-          <div class="heart-icon-wrapper">
-            <svg class="hand-drawn-heart" viewBox="0 0 50 50">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" transform="scale(1.8) translate(2, 2)"/>
-            </svg>
-          </div>
-        </div>
-        
-        <!-- Center Vertical Divider Line -->
-        <div class="footer-divider-line"></div>
-        
-        <!-- Left Column: Follow us / Social Cards -->
-        <div class="footer-social-col">
-          <h4 class="social-title" data-key="footer-follow">تابعنا على</h4>
-          <span class="social-subtitle">Follow us | Suivez-nous</span>
-          
-          <div class="social-cards-wrapper">
-            <!-- Facebook Card -->
-            <a href="https://www.facebook.com/profile.php?id=61561081512411" target="_blank" rel="noopener noreferrer" class="social-card facebook">
-              <i class="fab fa-facebook-f"></i>
-              <span class="social-card-text">Master Lkbde</span>
-            </a>
-            
-            <!-- TikTok Card -->
-            <a href="https://www.tiktok.com/@masterlkebde" target="_blank" rel="noopener noreferrer" class="social-card tiktok">
-              <i class="fab fa-tiktok"></i>
-              <span class="social-card-text">@masterlkebde</span>
-            </a>
-            
-            <!-- Snapchat Card -->
-            <a href="https://www.snapchat.com/add/masterlkbde" target="_blank" rel="noopener noreferrer" class="social-card snapchat">
-              <i class="fab fa-snapchat-ghost"></i>
-              <span class="social-card-text">@masterlkbde</span>
-            </a>
-          </div>
-        </div>
-        
-      </div>
-      
-      <!-- Footer Copyright Bar -->
-      <div class="footer-bottom-bar">
-        <p class="copyright-text">&copy; 2024 Master Lkbde — <span data-key="footer-rights">جميع الحقوق محفوظة</span></p>
-      </div>
+  <footer class="site-footer">
+    <div class="socials" aria-label="Social links">
+      <a href="https://www.facebook.com/search/top?q=Master%20Lkbde" target="_blank" rel="noopener">Facebook<br><b>Master Lkbde</b></a>
+      <a href="https://www.tiktok.com/@masterlkebde" target="_blank" rel="noopener">TikTok<br><b>@masterlkebde</b></a>
+      <a href="https://www.snapchat.com/add/masterlkbde" target="_blank" rel="noopener">Snapchat<br><b>@masterlkbde</b></a>
+      <a href="https://wa.me/22237490606" target="_blank" rel="noopener">WhatsApp<br><b>37 49 06 06</b></a>
     </div>
+    <div class="footer-brand"><h2>ماستر الكبدة</h2><p>أصالة المذاق الموريتاني<br>المجمر...</p></div>
+    <p class="copyright">© 2024 Master Lkbde — Tous droits réservés</p>
   </footer>
 
-  <!-- Custom JavaScript -->
+  <a class="mobile-whatsapp" data-whatsapp href="https://wa.me/22237490606?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%83%D8%A8%D8%AF%D8%A9%20%D9%85%D9%86%20%D9%85%D8%A7%D8%B3%D8%AA%D8%B1%20%D8%A7%D9%84%D9%83%D8%A8%D8%AF%D8%A9" target="_blank" rel="noopener">☘ <span data-i18n="mobileOrder">اطلب الآن</span></a>
   <script src="script.js"></script>
 </body>
 </html>
